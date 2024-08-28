@@ -6,6 +6,8 @@ const errorHandler = require("./middleware/errorHandler");
 const app = express();
 const PORT = process.env.PORT || 7000;
 
+require("dotenv").config();
+
 // Connect to the database
 createConnection(require("./config/typeorm.config"))
   .then(() => {
